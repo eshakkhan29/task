@@ -4,6 +4,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.custom-scroll {
+    height: calc(100vh - 160px);
+}
+
 .custom-scroll::-webkit-scrollbar {
     width: 8px;
 }

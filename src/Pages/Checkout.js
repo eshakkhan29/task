@@ -7,7 +7,8 @@ const Checkout = () => {
     const propertys = useSelector((state) => state.propertyReducer.property);
     let totalPrice = 0;
     propertys.map((property) => {
-        return totalPrice = parseFloat(totalPrice) + parseFloat(property.asking_price);
+        const price = parseFloat(totalPrice) + parseFloat(property.asking_price);
+        return totalPrice = price.toFixed(2);
     })
     return (
         <div className='flex justify-center items-center h-screen'>

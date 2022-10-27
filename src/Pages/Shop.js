@@ -19,7 +19,7 @@ const Shop = () => {
 
     return (
         <div>
-            <div className='flex items-center justify-between mx-8 py-10'>
+            <div className='flex items-center justify-between mx-8 pt-5 pb-10'>
                 <p onClick={() => navigate('/')} className='cursor-pointer text-2xl font-bold'>SHOP</p>
                 <div onClick={() => navigate('cart')} className='relative'>
                     <p className='text-2xl font-bold cursor-pointer'>Cart
@@ -30,13 +30,13 @@ const Shop = () => {
             <h1 className='font-medium text-2xl mx-8 mb-4'>Properties</h1>
             <div className='grid lg:grid-cols-5 grid-cols-1 gap-4'>
                 <div className='lg:col-span-3'>
-                    <div className='grid lg:grid-cols-3 grid-cols-1 custom-scroll overflow-y-scroll px-5 gap-x-5 gap-y-10 h-screen'>
+                    <div className='grid lg:grid-cols-3 grid-cols-1 custom-scroll overflow-y-scroll px-5 gap-x-5 gap-y-10 '>
                         {
                             properties.map((propertie, i) => <Properties propertie={propertie} key={i} />)
                         }
                     </div>
                 </div>
-                <div className='lg:col-span-2 w-full h-screen'>
+                <div className='lg:col-span-2 w-full'>
                     <Mapbox properties={properties} />
                 </div>
             </div>

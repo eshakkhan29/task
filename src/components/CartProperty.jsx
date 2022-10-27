@@ -13,7 +13,7 @@ const CartProperty = ({ property }) => {
 
 
     return (
-        <div className='grid grid-cols-5 border border-black rounded-3xl h-[230px]'>
+        <div className='grid grid-cols-5 border border-[#6a6a6a] rounded-3xl h-[230px] mr-5'>
             <div className='col-span-2 overflow-hidden'>
                 <img className='rounded-3xl w-full h-full object-cover' src={image} alt="" />
             </div>

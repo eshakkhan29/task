@@ -18,7 +18,7 @@ const Properties = ({ propertie }) => {
         <div className='lg:ml-5'>
             <div className='rounded-xl relative'>
                 <img className='rounded-xl w-full object-cover h-80' src={image} alt="" />
-                <div className='absolute w-full h-full  top-0 left-0 bg-gradient-to-t from-[#040404ce] via-[#ffffff00] to-[#ffffff00]'></div>
+                <div className='absolute w-full h-full rounded-xl  top-0 left-0 bg-gradient-to-t from-[#040404ce] via-[#ffffff00] to-[#ffffff00]'></div>
                 <div className='flex absolute bottom-5 left-2/4 -translate-x-2/4 gap-x-[20px] text-white'>
                     <span className='flex text-2xl items-center'><BiBed /><span className='text-xl ml-1'> {bed}</span></span>
                     <span className='flex text-2xl items-center'><TbBath /><span className='text-xl ml-1'> {bath}</span></span>
