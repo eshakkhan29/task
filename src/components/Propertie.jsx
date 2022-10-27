@@ -5,7 +5,7 @@ import { TbBath } from 'react-icons/tb';
 import { RiCarLine } from 'react-icons/ri';
 import { TbArrowAutofitContent } from 'react-icons/tb';
 import { useDispatch } from 'react-redux';
-import { addCartProperty } from '../fetaures/property/propertyCartSlice';
+import { addCartProperty } from '../redux/slice/propertyCartSlice';
 
 const Properties = ({ propertie }) => {
     const { name, image, house_type, house_info, asking_price, address } = propertie;

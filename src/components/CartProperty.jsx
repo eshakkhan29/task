@@ -4,7 +4,7 @@ import { BiBed } from 'react-icons/bi';
 import { RiCarLine } from 'react-icons/ri';
 import { TbArrowAutofitContent, TbBath } from 'react-icons/tb';
 import { useDispatch } from 'react-redux';
-import { deleteCartProperty } from '../fetaures/property/propertyCartSlice';
+import { deleteCartProperty } from '../redux/slice/propertyCartSlice';
 
 const CartProperty = ({ property }) => {
     const { name, image, house_info, asking_price, address } = property;
