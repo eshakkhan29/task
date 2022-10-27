@@ -3,19 +3,19 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Mapbox from '../components/Mapbox';
 import Properties from '../components/Propertie';
+
 const Shop = () => {
     const property = useSelector((state) => state.propertyReducer.property);
     const cartItem = property.length;
     const [properties, setProperties] = useState([]);
     const navigate = useNavigate()
 
-    // const url = env.process.REACT_APP_PROPARTY_API;
-
+    const url = `${process.env.REACT_APP_PROPERTY_API}`;
     useEffect(() => {
-        fetch('https://api.globalomls.com/api/properties')
+        fetch(url)
             .then(res => res.json())
             .then(data => setProperties(data))
-    }, []);
+    }, [url]);
 
     return (
         <div>
@@ -30,13 +30,13 @@ const Shop = () => {
             <h1 className='font-medium text-2xl mx-8 mb-4'>Properties</h1>
             <div className='grid lg:grid-cols-5 grid-cols-1 gap-4'>
                 <div className='lg:col-span-3'>
-                    <div className='grid lg:grid-cols-3 grid-cols-1 custom-scroll overflow-y-scroll px-5 gap-5 h-screen'>
+                    <div className='grid lg:grid-cols-3 grid-cols-1 custom-scroll overflow-y-scroll px-5 gap-x-5 gap-y-10 h-screen'>
                         {
                             properties.map((propertie, i) => <Properties propertie={propertie} key={i} />)
                         }
                     </div>
                 </div>
-                <div className='lg:col-span-2 h-screen w-full'>
+                <div className='lg:col-span-2 w-full h-screen'>
                     <Mapbox properties={properties} />
                 </div>
             </div>
