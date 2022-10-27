@@ -5,7 +5,7 @@ import CartProperty from '../components/CartProperty';
 
 const Cart = () => {
     const navigate = useNavigate()
-    const propertys = useSelector((state) => state.booksReducer.books);
+    const propertys = useSelector((state) => state.propertyReducer.property);
     const cartItem = propertys.length;
     let totalPrice = 0;
     propertys.map((property) => {

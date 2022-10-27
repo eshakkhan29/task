@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
     const navigate = useNavigate();
-    const propertys = useSelector((state) => state.booksReducer.books);
+    const propertys = useSelector((state) => state.propertyReducer.property);
     let totalPrice = 0;
     propertys.map((property) => {
         return totalPrice = parseFloat(totalPrice) + parseFloat(property.asking_price);

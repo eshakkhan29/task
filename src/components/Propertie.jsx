@@ -5,7 +5,7 @@ import { TbBath } from 'react-icons/tb';
 import { RiCarLine } from 'react-icons/ri';
 import { TbArrowAutofitContent } from 'react-icons/tb';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../fetaures/property/BooksSlice';
+import { addCartProperty } from '../fetaures/property/propertyCartSlice';
 
 const Properties = ({ propertie }) => {
     const { name, image, house_type, house_info, asking_price, address } = propertie;
@@ -38,7 +38,7 @@ const Properties = ({ propertie }) => {
                         <span className='text-sm m-0'>Asking Price</span>
                         <p className='font-medium text-2xl'>${asking_price}</p>
                     </div>
-                    <button onClick={() => dispatch(addBook(propertie))} className='outline-none text-white bg-gray-600 rounded-lg py-[4px] px-[35px]'>Buy</button>
+                    <button onClick={() => dispatch(addCartProperty(propertie))} className='outline-none text-white bg-gray-600 rounded-lg py-[4px] px-[35px]'>Buy</button>
                 </div>
                 <p className='font-medium text-lg my-2 w-9/12 leading-[1.3]'>{name.length < 40 ? name : name.slice(0, 40) + "..."}</p>
                 <h4 className='text-[#2e2e2e] text-base'>{address}</h4>

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Mapbox from '../components/Mapbox';
 import Properties from '../components/Propertie';
 const Shop = () => {
-    const property = useSelector((state) => state.booksReducer.books);
+    const property = useSelector((state) => state.propertyReducer.property);
     const cartItem = property.length;
     const [properties, setProperties] = useState([]);
     const navigate = useNavigate()

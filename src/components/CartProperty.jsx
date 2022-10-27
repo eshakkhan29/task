@@ -4,7 +4,7 @@ import { BiBed } from 'react-icons/bi';
 import { RiCarLine } from 'react-icons/ri';
 import { TbArrowAutofitContent, TbBath } from 'react-icons/tb';
 import { useDispatch } from 'react-redux';
-import { deleteBook } from '../fetaures/property/BooksSlice';
+import { deleteCartProperty } from '../fetaures/property/propertyCartSlice';
 
 const CartProperty = ({ property }) => {
     const { name, image, house_info, asking_price, address } = property;
@@ -20,7 +20,7 @@ const CartProperty = ({ property }) => {
             <div className='p-5 col-span-3'>
                 <div className='flex items-center justify-between'>
                     <p className='font-medium text-3xl'>${asking_price}</p>
-                    <span onClick={() => dispatch(deleteBook(image))} className='flex text-3xl items-center text-red-500 cursor-pointer'><VscTrash /></span>
+                    <span onClick={() => dispatch(deleteCartProperty(image))} className='flex text-3xl items-center text-red-500 cursor-pointer'><VscTrash /></span>
                 </div>
                 <p className='font-medium text-lg my-2 w-10/12 leading-[1.3]'>{name.length < 40 ? name : name.slice(0, 40) + "..."}</p>
                 <p className='text-[#2e2e2e] text-sm'>{address}</p>

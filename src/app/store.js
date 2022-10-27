@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import booksReducer from "../fetaures/property/BooksSlice";
+import propertyReducer from "../fetaures/property/propertyCartSlice";
 
 const store = configureStore({
   reducer: {
-    booksReducer: booksReducer,
+    propertyReducer: propertyReducer,
   },
 });
 
