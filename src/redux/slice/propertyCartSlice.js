@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialProperty = {
-  property: [
-  ],
+  property: [],
 };
 
 export const propertyCartSlice = createSlice({
@@ -14,7 +13,9 @@ export const propertyCartSlice = createSlice({
     },
     deleteCartProperty: (state, action) => {
       const image = action.payload;
-      state.property = state.property.filter((property) => property.image !== image);
+      state.property = state.property.filter(
+        (property) => property.image !== image
+      );
     },
   },
 });
