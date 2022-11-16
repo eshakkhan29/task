@@ -5,7 +5,7 @@ import Checkout from './Pages/Checkout';
 import Shop from './Pages/Shop';
 function App() {
   return (
-    <div className='px-10'>
+    <div className='px-5 lg:px-10'>
       <Routes>
         <Route path="/" element={<Shop />} />
           <Route path="cart" element={<Cart />} />

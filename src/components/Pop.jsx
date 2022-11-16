@@ -1,11 +1,9 @@
 import React from "react";
-import { AiFillCaretLeft } from "react-icons/ai";
 import { BiBed } from "react-icons/bi";
 import { RiCarLine } from "react-icons/ri";
 import { TbArrowAutofitContent, TbBath } from "react-icons/tb";
 import { useDispatch, useSelector } from "react-redux";
 import { addCartProperty } from "../redux/slice/propertyCartSlice";
-import Properties from "./Propertie";
 
 function Pop() {
   const popupData = useSelector((state) => state.popupReducer.popup);
@@ -16,9 +14,9 @@ function Pop() {
   return (
     <div>
       <div className="rounded-xl relative">
-        <img className="rounded-xl w-full object-cover h-80" src={image} />
+        <img className="rounded-xl w-full object-cover h-52 lg:h-80" src={image} />
         <div className="absolute w-full h-full rounded-xl  top-0 left-0 bg-gradient-to-t from-[#040404ce] via-[#ffffff00] to-[#ffffff00]"></div>
-        <div className="flex items-center justify-around px-3 w-full absolute bottom-5 left-2/4 -translate-x-2/4 gap-x-[20px] text-white">
+        <div className="flex items-center justify-around px-3 w-full absolute bottom-5 left-2/4 -translate-x-2/4 gap-x-2 lg:gap-x-[20px] text-white">
           <span className="flex text-2xl items-center">
             <BiBed />
             <span className="text-xl ml-1"> {bed}</span>

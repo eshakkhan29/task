@@ -38,15 +38,15 @@ const Shop = () => {
         </div>
       </div>
       <h1 className="font-medium text-2xl mx-8 mb-4">Properties</h1>
-      <div className="grid grid-cols-5  gap-4">
-        <div className="col-span-3">
-          <div className="grid grid-cols-3 custom-scroll overflow-y-scroll px-5 gap-x-5 gap-y-10 ">
+      <div className="grid lg:grid-cols-5 grid-cols-1 gap-4">
+        <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 lg:grid-cols-3 custom-scroll lg:overflow-y-scroll px-5 gap-x-5 gap-y-10 ">
             {properties.map((propertie, i) => (
               <Properties propertie={propertie} key={i} />
             ))}
           </div>
         </div>
-        <div className="col-span-2 w-full">
+        <div className="lg:col-span-2">
           <Mapbox properties={properties} />
         </div>
       </div>

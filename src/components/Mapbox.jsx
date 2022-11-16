@@ -17,7 +17,7 @@ const Mapbox = ({ properties }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="h-full w-full px-5">
+    <div className="map-height lg:h-full w-full lg:px-5">
       <div className="h-full w-full overflow-hidden rounded-3xl">
         <Map
           initialViewState={{
@@ -52,7 +52,7 @@ const Mapbox = ({ properties }) => {
             </Marker>
           ))}
           {showPopup && (
-            <div className="my-5 absolute opacity-90 top-10 left-10 bg-[#ededed82] rounded-3xl p-4">
+            <div className="lg:mx-0 mx-5 absolute opacity-90 lg:top-10 lg:left-10 bg-[#ededed82] rounded-3xl p-4">
               <p onClick={()=>setShowPopup(false)} className="text-gray-600 font-bold flex justify-end px-2 pb-2 text-3xl cursor-pointer">
                 <IoIosCloseCircle/>
               </p>
