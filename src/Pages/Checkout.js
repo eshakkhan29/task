@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Button from "../components/Button";
 
 const Checkout = () => {
   const navigate = useNavigate();
@@ -20,12 +21,7 @@ const Checkout = () => {
           You have purchased {propertys.length} properties for ${totalPrice}
         </p>
         <div className="py-10 text-center">
-          <button
-            onClick={() => navigate("/")}
-            className="text-white bg-black py-2 font-bold px-14"
-          >
-            Go back to Store
-          </button>
+          <Button to={"/"}>Go back to Store</Button>
         </div>
       </div>
     </div>
