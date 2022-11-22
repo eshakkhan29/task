@@ -12,7 +12,8 @@ import Pop from "./Pop";
 import { useDispatch } from "react-redux";
 import { addPopupData } from "../redux/slice/PopupSlice";
 const Mapbox = ({ properties }) => {
-  const TOKEN = process.env.REACT_APP_MAP_TOKEN;
+  const TOKEN = "pk.eyJ1IjoieWVhc2lyMTEiLCJhIjoiY2w5b2kzaHNlMGoxNTNwbzY2MHdnbjB4NCJ9.mRL-d3PWB08xzEMDnOWUog";
+  console.log(TOKEN);
   const [showPopup, setShowPopup] = useState(false);
   const dispatch = useDispatch();
 

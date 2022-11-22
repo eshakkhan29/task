@@ -10,7 +10,8 @@ const Shop = () => {
   const [properties, setProperties] = useState([]);
   const navigate = useNavigate();
 
-  const url = `${process.env.REACT_APP_PROPERTY_API}`;
+  // const url = `${process.env.REACT_APP_PROPERTY_API}`;
+  const url = "https://api.globalomls.com/api/properties";
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
